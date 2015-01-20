@@ -26,3 +26,33 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+
+.DS_store
+node_modules
+jspm_packages
+bower_components
+.idea
+.DS_STORE
+
+*.sublime-workspace
+
+main-built.js
+/src/client/app/main-built.js
+
+node_modules/phantomjs/
+node_modules/.bin/phantomjs*
