@@ -1,10 +1,12 @@
-System.register(["aurelia-router"], function (_export) {
+System.register(["aurelia-router", "aurelia-framework"], function (_export) {
   "use strict";
 
-  var Router, _prototypeProperties, Home;
+  var Router, Parent, _prototypeProperties, Home;
   return {
     setters: [function (_aureliaRouter) {
       Router = _aureliaRouter.Router;
+    }, function (_aureliaFramework) {
+      Parent = _aureliaFramework.Parent;
     }],
     execute: function () {
       _prototypeProperties = function (child, staticProps, instanceProps) {
@@ -15,22 +17,13 @@ System.register(["aurelia-router"], function (_export) {
       Home = (function () {
         function Home(router) {
           this.router = router;
-          this.query = "";
         }
 
         _prototypeProperties(Home, {
           inject: {
             value: function inject() {
-              return [Router];
-            },
-            writable: true,
-            enumerable: true,
-            configurable: true
-          }
-        }, {
-          submit: {
-            value: function submit() {
-              this.router.navigate("search", Object.toQueryString({ q: this.query }));
+              debugger;
+              return [Parent.of(Router)];
             },
             writable: true,
             enumerable: true,

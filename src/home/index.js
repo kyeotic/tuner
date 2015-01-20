@@ -1,12 +1,12 @@
 import {Router} from 'aurelia-router';
+import {Parent} from 'aurelia-framework';
 
 export class Home {
-  static inject() { return [Router]; }
+  static inject() { 
+    debugger;
+    return [Parent.of(Router)]; 
+  }
   constructor(router){
     this.router = router;
-    this.query = '';
-  }
-  submit() {
-    this.router.navigate('search', Object.toQueryString({q: this.query}));
   }
 }
