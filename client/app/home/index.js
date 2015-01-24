@@ -16,14 +16,23 @@ System.register(["aurelia-router", "aurelia-framework"], function (_export) {
 
       Home = (function () {
         function Home(router) {
-          this.router = router;
+          this.nav = router;
+          this.query = "";
         }
 
         _prototypeProperties(Home, {
           inject: {
             value: function inject() {
-              debugger;
               return [Parent.of(Router)];
+            },
+            writable: true,
+            enumerable: true,
+            configurable: true
+          }
+        }, {
+          submit: {
+            value: function submit() {
+              this.nav.navigate("search?" + Object.toQueryString({ q: this.query }));
             },
             writable: true,
             enumerable: true,

@@ -1,10 +1,10 @@
-System.register(["spotify/service"], function (_export) {
+System.register(["app/spotify/service"], function (_export) {
   "use strict";
 
   var spotify, _prototypeProperties, Search;
   return {
-    setters: [function (_spotifyService) {
-      spotify = _spotifyService.spotify;
+    setters: [function (_appSpotifyService) {
+      spotify = _appSpotifyService.spotify;
     }],
     execute: function () {
       _prototypeProperties = function (child, staticProps, instanceProps) {
@@ -29,9 +29,7 @@ System.register(["spotify/service"], function (_export) {
         }, {
           activate: {
             value: function activate(query) {
-              spotify.search(query).then(function (results) {
-                return console.log(results);
-              });
+              console.log(query);
             },
             writable: true,
             enumerable: true,

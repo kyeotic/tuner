@@ -1,4 +1,4 @@
-import {spotify} from 'spotify/service';
+import {spotify} from 'app/spotify/service';
 
 export class Search {
   static inject() { return [spotify]; }
@@ -7,6 +7,7 @@ export class Search {
   }
 
   activate(query) {
-    spotify.search(query).then(results => console.log(results));
+    console.log(query);
+    //spotify.search(query).then(results => console.log(results));
   }
 }

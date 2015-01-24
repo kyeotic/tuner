@@ -3,10 +3,13 @@ import {Parent} from 'aurelia-framework';
 
 export class Home {
   static inject() { 
-    debugger;
     return [Parent.of(Router)]; 
   }
   constructor(router){
-    this.router = router;
+    this.nav = router;
+    this.query = '';
+  }
+  submit() {
+    this.nav.navigate('search?' + Object.toQueryString({q: this.query}));
   }
 }
