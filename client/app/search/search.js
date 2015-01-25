@@ -4,7 +4,7 @@ System.register(["app/spotify/service"], function (_export) {
   var spotify, _prototypeProperties, Search;
   return {
     setters: [function (_appSpotifyService) {
-      spotify = _appSpotifyService.spotify;
+      spotify = _appSpotifyService["default"];
     }],
     execute: function () {
       _prototypeProperties = function (child, staticProps, instanceProps) {
@@ -13,23 +13,13 @@ System.register(["app/spotify/service"], function (_export) {
       };
 
       Search = (function () {
-        function Search(spotify) {
-          this.spotify = spotify;
-        }
+        function Search() {}
 
-        _prototypeProperties(Search, {
-          inject: {
-            value: function inject() {
-              return [spotify];
-            },
-            writable: true,
-            enumerable: true,
-            configurable: true
-          }
-        }, {
+        _prototypeProperties(Search, null, {
           activate: {
-            value: function activate(query) {
-              console.log(query);
+            value: function activate(params, query) {
+              debugger;
+              console.log("search activate", params, query);
             },
             writable: true,
             enumerable: true,

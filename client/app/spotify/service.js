@@ -41,7 +41,7 @@ System.register(["aurelia-http-client"], function (_export) {
 
         return Spotify;
       })();
-      _export("Spotify", Spotify);
+      _export("default", new Spotify());
     }
   };
 });

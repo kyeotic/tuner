@@ -1,5 +1,6 @@
-import {Router} from 'aurelia-router';
+import {Router, RouteRecognizer} from 'aurelia-router';
 import {Parent} from 'aurelia-framework';
+import {Util} from 'app/core/util';
 
 export class Home {
   static inject() { 
@@ -10,6 +11,6 @@ export class Home {
     this.query = '';
   }
   submit() {
-    this.nav.navigate('search?' + Object.toQueryString({q: this.query}));
+    this.nav.navigate('search?' + Util.toQueryString({q: this.query}));
   }
 }

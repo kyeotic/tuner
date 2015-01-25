@@ -1,6 +1,6 @@
 import {HttpClient} from 'aurelia-http-client';
 
-export class Spotify {
+class Spotify {
 
   static inject() { return [HttpClient]; }
   constructor(http) {
@@ -13,3 +13,5 @@ export class Spotify {
   }
 
 }
+
+export default new Spotify()

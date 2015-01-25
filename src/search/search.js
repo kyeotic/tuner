@@ -1,13 +1,10 @@
-import {spotify} from 'app/spotify/service';
+import spotify from 'app/spotify/service';
 
 export class Search {
-  static inject() { return [spotify]; }
-  constructor(spotify) {
-    this.spotify = spotify;
-  }
 
-  activate(query) {
-    console.log(query);
+  activate(params, query) {
+    debugger;
+    console.log('search activate', params, query);
     //spotify.search(query).then(results => console.log(results));
   }
 }
