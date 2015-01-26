@@ -4,6 +4,7 @@ export class Search {
 
   activate(params, query) {
     this.query = query.q;
-    spotify.search(this.query).then(results => console.log(results));
+    spotify.search(this.query)
+      .then(results => console.log(results));
   }
 }

@@ -35,7 +35,7 @@ System.register(["aurelia-router", "aurelia-framework", "app/core/util"], functi
         }, {
           submit: {
             value: function submit() {
-              this.nav.navigate("search?" + Util.toQueryString({ q: this.query }));
+              this.nav.navigate("search" + Util.toQueryString({ q: this.query }));
             },
             writable: true,
             enumerable: true,
