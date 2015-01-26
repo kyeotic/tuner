@@ -18,8 +18,10 @@ System.register(["app/spotify/service"], function (_export) {
         _prototypeProperties(Search, null, {
           activate: {
             value: function activate(params, query) {
-              debugger;
-              console.log("search activate", params, query);
+              this.query = query.q;
+              spotify.search(this.query).then(function (results) {
+                return console.log(results);
+              });
             },
             writable: true,
             enumerable: true,

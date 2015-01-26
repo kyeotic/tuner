@@ -1,10 +1,12 @@
-System.register(["aurelia-http-client"], function (_export) {
+System.register(["aurelia-http-client", "app/core/util"], function (_export) {
   "use strict";
 
-  var HttpClient, _prototypeProperties, Spotify;
+  var HttpClient, Util, _prototypeProperties, Spotify;
   return {
     setters: [function (_aureliaHttpClient) {
       HttpClient = _aureliaHttpClient.HttpClient;
+    }, function (_appCoreUtil) {
+      Util = _appCoreUtil.Util;
     }],
     execute: function () {
       _prototypeProperties = function (child, staticProps, instanceProps) {
@@ -14,7 +16,7 @@ System.register(["aurelia-http-client"], function (_export) {
 
       Spotify = (function () {
         function Spotify(http) {
-          this.http = http;
+          this.http = new HttpClient("https://api.spotify.com/v1");
           this.baseUrl = "https://api.spotify.com/";
         }
 
@@ -30,8 +32,11 @@ System.register(["aurelia-http-client"], function (_export) {
         }, {
           search: {
             value: function search(query) {
-              var type = arguments[1] === undefined ? ["album", "artist", "playlsit", "track"] : arguments[1];
-              return this.http.get(this.baseUrl + "search?" + Object.toQueryString({ q: query, type: type }));
+              var type = arguments[1] === undefined ? ["album", "artist", "playlist", "track"] : arguments[1];
+
+
+              debugger;
+              return this.http.get("search" + Util.toQueryString({ q: query }) + "&type=" + type.join(","));
             },
             writable: true,
             enumerable: true,
