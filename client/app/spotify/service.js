@@ -8,13 +8,13 @@ System.register(["aurelia-http-client", "app/core/util", "app/spotify/artist", "
     }, function (_appCoreUtil) {
       Util = _appCoreUtil.Util;
     }, function (_appSpotifyArtist) {
-      Artist = _appSpotifyArtist["default"];
+      Artist = _appSpotifyArtist.Artist;
     }, function (_appSpotifyTrack) {
-      Track = _appSpotifyTrack["default"];
+      Track = _appSpotifyTrack.Track;
     }, function (_appSpotifyAlbum) {
-      Album = _appSpotifyAlbum["default"];
+      Album = _appSpotifyAlbum.Album;
     }, function (_appSpotifyPager) {
-      Pager = _appSpotifyPager["default"];
+      Pager = _appSpotifyPager.Pager;
     }],
     execute: function () {
       _prototypeProperties = function (child, staticProps, instanceProps) {
@@ -41,12 +41,8 @@ System.register(["aurelia-http-client", "app/core/util", "app/spotify/artist", "
           search: {
             value: function search(query) {
               var _this = this;
-              var type = arguments[1] === undefined ? ["album", "artist", "playlist", "track"] : arguments[1];
-
-
-              debugger;
+              var type = arguments[1] === undefined ? ["album", "artist", "track"] : arguments[1];
               return this.http.get("search" + Util.toQueryString({ q: query }) + "&type=" + type.join(",")).then(function (results) {
-                console.log(results);
                 return {
                   artists: new Pager(_this.http, results.content.artists, Artist),
                   albums: new Pager(_this.http, results.content.albums, Album),

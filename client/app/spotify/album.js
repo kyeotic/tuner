@@ -4,11 +4,11 @@ System.register(["app/spotify/artist", "app/spotify/track", "app/spotify/pager"]
   var Artist, Track, Pager, Album;
   return {
     setters: [function (_appSpotifyArtist) {
-      Artist = _appSpotifyArtist["default"];
+      Artist = _appSpotifyArtist.Artist;
     }, function (_appSpotifyTrack) {
-      Track = _appSpotifyTrack["default"];
+      Track = _appSpotifyTrack.Track;
     }, function (_appSpotifyPager) {
-      Pager = _appSpotifyPager["default"];
+      Pager = _appSpotifyPager.Pager;
     }],
     execute: function () {
       Album = function Album(http) {
@@ -31,7 +31,8 @@ System.register(["app/spotify/artist", "app/spotify/track", "app/spotify/pager"]
         this.uri = data.uri || "";
 
         this.releaseDate = data.release_date;
-        this.tracks = new Pager(http, data.tracks, Track);
+
+        if (data.tracks) this.tracks = new Pager(http, data.tracks, Track);
 
 
         this.isFull = "popularity" in data;

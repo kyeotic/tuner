@@ -1,6 +1,6 @@
-import Artist from 'app/spotify/artist';
-import Track from 'app/spotify/track';
-import Pager from 'app/spotify/pager';
+import {Artist} from 'app/spotify/artist';
+import {Track} from 'app/spotify/track';
+import {Pager} from 'app/spotify/pager';
 
 export class Album {
   constructor(http, data = {}) {
@@ -19,7 +19,10 @@ export class Album {
     this.uri = data.uri || '';
 
     this.releaseDate = data.release_date;
-    this.tracks = new Pager(http, data.tracks, Track);
+
+    //Does not appear on simplified objects
+    if (data.tracks)
+      this.tracks = new Pager(http, data.tracks, Track);
 
 
     this.isFull = 'popularity' in data;

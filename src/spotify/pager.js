@@ -8,15 +8,15 @@ export class Pager {
       this.type = type;
 
       this.href = data.href;
-      this.items = data.items.map(i => new type(i));
+      this.items = data.items.map(i => new type(http, i));
       this.limit = data.limit;
       this.offset = data.offset;
       this.next = data.next;
       this.previous = data.previous;
       this.total = data.total;
 
-      Object.defineProperty(this, 'hasNext', { get: () => { return this.next;} });
-      Object.defineProperty(this, 'hasPrevious', { get: () => { return this.previous;} });
+      Object.defineProperty(this, 'hasNext', { get: () => { return this.next !== null || this.next !== undefined;} });
+      Object.defineProperty(this, 'hasPrevious', { get: () => { return this.previous !== null || this.previous !== undefined;} });
     }
 
     getNext() {

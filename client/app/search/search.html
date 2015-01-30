@@ -1,2 +1,22 @@
 <template>
+  <import from='tabs/tab-control'></import>
+  <import from='tabs/tab-item'></import>
+  <form class="form-inline container" submit.trigger="submit()">
+    <div class="center-block ">
+      <div class="form-group">
+        <input class="form-control" type="search" id="searchTxt" value.bind="query" placeholder="Search Spotify">
+      </div>
+       <button type="submit" class="btn btn-default">Search</button>
+    </div>
+  </form>
+  <div>
+  <compose model.bind="album"></compose>
+    <tab-control>
+      <tab-item repeat.for="tab of tabs" title="${tab.header}">
+        <h4>${tab.header} Content</h4>
+        Things and stuff
+       
+      </tab-item>
+    </tab-control>
+  </div>
 </template>

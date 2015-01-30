@@ -1,5 +1,5 @@
-import Artist from 'app/spotify/artist';
-import Album from 'app/spotify/album';
+import {Artist} from 'app/spotify/artist';
+import {Album} from 'app/spotify/album';
 
 export class Track {
   constructor(http, data = {}) {

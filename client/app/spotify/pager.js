@@ -21,7 +21,7 @@ System.register([], function (_export) {
 
           this.href = data.href;
           this.items = data.items.map(function (i) {
-            return new type(i);
+            return new type(http, i);
           });
           this.limit = data.limit;
           this.offset = data.offset;
@@ -30,10 +30,10 @@ System.register([], function (_export) {
           this.total = data.total;
 
           Object.defineProperty(this, "hasNext", { get: function () {
-              return _this.next;
+              return _this.next !== null || _this.next !== undefined;
             } });
           Object.defineProperty(this, "hasPrevious", { get: function () {
-              return _this.previous;
+              return _this.previous !== null || _this.previous !== undefined;
             } });
         }
 

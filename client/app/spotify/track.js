@@ -4,9 +4,9 @@ System.register(["app/spotify/artist", "app/spotify/album"], function (_export) 
   var Artist, Album, Track;
   return {
     setters: [function (_appSpotifyArtist) {
-      Artist = _appSpotifyArtist["default"];
+      Artist = _appSpotifyArtist.Artist;
     }, function (_appSpotifyAlbum) {
-      Album = _appSpotifyAlbum["default"];
+      Album = _appSpotifyAlbum.Album;
     }],
     execute: function () {
       Track = function Track(http) {
