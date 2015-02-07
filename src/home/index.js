@@ -11,6 +11,6 @@ export class Home {
     this.query = '';
   }
   submit() {
-    this.nav.navigate('search' + Util.toQueryString({q: this.query}));
+    this.nav.navigate('search?' + Util.toQueryString({q: this.query}));
   }
 }

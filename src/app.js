@@ -6,6 +6,7 @@ export class App {
     this.router = router;
     this.router.configure(config => {
       config.title = 'Tuner';
+      config.options.pushState = true;
       config.map([
           { route: ['', 'home'],        moduleId: 'home/index',       title: 'Home',   nav: false }
         , { route: 'search',            moduleId: 'search/search',    title: 'Search', nav: true }

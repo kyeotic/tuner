@@ -20,7 +20,7 @@ System.register(["aurelia-framework"], function (_export) {
         _prototypeProperties(TabItem, {
           metadata: {
             value: function metadata() {
-              return Behavior.customElement("tab-item").withProperty("title").useShadowDOM();
+              return Behavior.customElement("tab-item").withProperty("title");
             },
             writable: true,
             enumerable: true,

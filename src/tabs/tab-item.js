@@ -4,8 +4,7 @@ export class TabItem {
   static metadata(){
     return Behavior
       .customElement('tab-item')
-      .withProperty('title')
-      .useShadowDOM();
+      .withProperty('title');
   }
 
   constructor(){

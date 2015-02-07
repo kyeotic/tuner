@@ -32,6 +32,7 @@ export class Util {
 
       if (pairs.length === 0) { return ''; }
 
-      return "?" + pairs.join("&");
+      return pairs.join("&");
     }
+    static logError(error) { console.error(error); }
 }

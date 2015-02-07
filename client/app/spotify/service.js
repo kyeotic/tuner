@@ -42,15 +42,13 @@ System.register(["aurelia-http-client", "app/core/util", "app/spotify/artist", "
             value: function search(query) {
               var _this = this;
               var type = arguments[1] === undefined ? ["album", "artist", "track"] : arguments[1];
-              return this.http.get("search" + Util.toQueryString({ q: query }) + "&type=" + type.join(",")).then(function (results) {
+              return this.http.get("search?" + Util.toQueryString({ q: query }) + "&type=" + type.join(",")).then(function (results) {
                 return {
                   artists: new Pager(_this.http, results.content.artists, Artist),
                   albums: new Pager(_this.http, results.content.albums, Album),
                   tracks: new Pager(_this.http, results.content.tracks, Track)
                 };
-              })["catch"](function (error) {
-                return console.error(error);
-              });
+              })["catch"](Util.logError);
             },
             writable: true,
             enumerable: true,

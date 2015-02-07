@@ -50,7 +50,15 @@ System.register([], function (_export) {
                 return "";
               }
 
-              return "?" + pairs.join("&");
+              return pairs.join("&");
+            },
+            writable: true,
+            enumerable: true,
+            configurable: true
+          },
+          logError: {
+            value: function logError(error) {
+              console.error(error);
             },
             writable: true,
             enumerable: true,

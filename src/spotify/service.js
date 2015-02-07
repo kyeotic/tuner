@@ -16,17 +16,16 @@ class Spotify {
   //'playlist' exluded from type search for now
   search(query, type = ['album', 'artist', 'track']) {
     //Spotify wants a comma separated type array, but utils will use the PHP array syntax
-    return this.http.get("search" + Util.toQueryString({q: query}) + "&type=" + type.join(','))
+    return this.http.get("search?" + Util.toQueryString({q: query}) + "&type=" + type.join(','))
       .then(results => {
         return {
             artists: new Pager(this.http, results.content.artists, Artist)
           , albums:  new Pager(this.http, results.content.albums, Album)
           , tracks:  new Pager(this.http, results.content.tracks, Track)
-        }
+        };
       })
-      .catch(error => console.error(error));
+      .catch(Util.logError);
   }
-
 }
 
 export default new Spotify()

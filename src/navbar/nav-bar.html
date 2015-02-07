@@ -2,7 +2,7 @@
   <header class="nav navbar navbar-default navbar-fixed-top" role="banner">
     <div class="">
       <nav role="navigation">
-        <a class="brand navbar-brand" href="#"><i class="fa fa-home"></i></a>
+        <a class="brand navbar-brand" href="/"><i class="fa fa-home"></i></a>
         <ul class="nav navbar-nav">
           <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
             <a href.bind="row.href">${row.title}</a>

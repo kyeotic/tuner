@@ -1,16 +1,14 @@
-System.register(["app/spotify/service", "app/search/album-search-result", "app/search/artist-search-result", "app/search/track-search-result"], function (_export) {
+System.register(["app/spotify/service", "aurelia-router", "aurelia-framework"], function (_export) {
   "use strict";
 
-  var spotify, AlbumSearchResult, ArtistSearchResult, TrackSearchResult, _prototypeProperties, Search;
+  var spotify, Router, Parent, _prototypeProperties, makeTab, Search;
   return {
     setters: [function (_appSpotifyService) {
       spotify = _appSpotifyService["default"];
-    }, function (_appSearchAlbumSearchResult) {
-      AlbumSearchResult = _appSearchAlbumSearchResult.AlbumSearchResult;
-    }, function (_appSearchArtistSearchResult) {
-      ArtistSearchResult = _appSearchArtistSearchResult.ArtistSearchResult;
-    }, function (_appSearchTrackSearchResult) {
-      TrackSearchResult = _appSearchTrackSearchResult.TrackSearchResult;
+    }, function (_aureliaRouter) {
+      Router = _aureliaRouter.Router;
+    }, function (_aureliaFramework) {
+      Parent = _aureliaFramework.Parent;
     }],
     execute: function () {
       _prototypeProperties = function (child, staticProps, instanceProps) {
@@ -18,26 +16,52 @@ System.register(["app/spotify/service", "app/search/album-search-result", "app/s
         if (instanceProps) Object.defineProperties(child.prototype, instanceProps);
       };
 
+      makeTab = function (header, model) {
+        return { header: header, model: model, viewmodel: "./search-result" };
+      };
+
       Search = (function () {
-        function Search() {
+        function Search(router) {
           var _this = this;
           this.tabs = [];
+          this.nav = router;
           this.query = "";
-          Object.defineProperty(this, "hasQuery", {
+          Object.defineProperty(this, "hasResults", {
             get: function () {
               return _this.query !== undefined && _this.query.length > 2;
             }
           });
         }
 
-        _prototypeProperties(Search, null, {
+        _prototypeProperties(Search, {
+          inject: {
+            value: function inject() {
+              return [Parent.of(Router)];
+            },
+            writable: true,
+            enumerable: true,
+            configurable: true
+          }
+        }, {
+          search: {
+            value: function search() {
+              this.nav.navigate("search?" + Util.toQueryString({ q: this.query }));
+            },
+            writable: true,
+            enumerable: true,
+            configurable: true
+          },
           activate: {
             value: function activate(params, query) {
               var _this2 = this;
               this.query = query.q || "";
+
+              if (this.query.length === 0) {
+                return;
+              }
+
               return spotify.search(this.query).then(function (results) {
-                _this2.tabs = [{ header: "Artists", model: new ArtistSearchResult(results.artists) }, { header: "Tracks", model: new TrackSearchResult(results.tracks) }];
-                _this2.album = results.albums;
+                _this2.tabs = [makeTab("Albums", results.albums), makeTab("Artists", results.artists), makeTab("Tracks", results.tracks)];
               });
             },
             writable: true,
