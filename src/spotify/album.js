@@ -28,13 +28,13 @@ export class Album {
 
 
     this.isFull = 'popularity' in data;
+  }
 
-    //Update a simplified object with all details
-    this.fill = (force) => {
-      if (!force && (this.href === undefined || this.href.length === 0 || this.isFull)) return;
-      http.get(this.href).then(result => {
+  //Update a simplified object with all details
+  fill(force) {
+  	if (!force && (this.href === undefined || this.href.length === 0 || this.isFull)) return;
+      this.http.get(this.href).then(result => {
         console.log(result);
       })
-    }
   }
 }

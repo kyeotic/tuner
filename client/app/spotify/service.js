@@ -53,6 +53,17 @@ System.register(["aurelia-http-client", "app/core/util", "app/spotify/artist", "
             writable: true,
             enumerable: true,
             configurable: true
+          },
+          getAlbum: {
+            value: function getAlbum(id) {
+              var _this2 = this;
+              return this.http.get("albums/" + id).then(function (result) {
+                return new Album(_this2.http, result.content);
+              })["catch"](Util.logError);
+            },
+            writable: true,
+            enumerable: true,
+            configurable: true
           }
         });
 

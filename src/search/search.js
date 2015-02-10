@@ -19,7 +19,6 @@ export class Search {
   }
 
   search() {
-    debugger;
     this.nav.navigate('search?' + Util.toQueryString({q: this.query}));
   }
 

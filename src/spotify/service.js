@@ -26,6 +26,12 @@ class Spotify {
       })
       .catch(Util.logError);
   }
+
+  getAlbum(id) {
+  	return this.http.get(`albums/${id}`)
+  		.then(result => new Album(this.http, result.content))
+  		.catch(Util.logError);
+  }
 }
 
 export default new Spotify()

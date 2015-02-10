@@ -47,7 +47,6 @@ System.register(["app/spotify/service", "aurelia-router", "aurelia-framework", "
         }, {
           search: {
             value: function search() {
-              debugger;
               this.nav.navigate("search?" + Util.toQueryString({ q: this.query }));
             },
             writable: true,
