@@ -21,7 +21,6 @@ System.register(["app/spotify/service", "app/core/util"], function (_export) {
           activate: {
             value: function activate(config) {
               var _this = this;
-              debugger;
               return spotify.getAlbum(config.id).then(function (result) {
                 return _this.album = result;
               })["catch"](Util.logError);

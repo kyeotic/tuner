@@ -6,6 +6,10 @@
 		<div>
 			<span>${album.type}</span>
 			<h1>${album.name}</h1>
+			<dl>
+				<dt>Genres</dt>
+				<dd>${album.genres.join(',')}</dd>
+			</dl>
 		</div>
 	</div>
 </template>
