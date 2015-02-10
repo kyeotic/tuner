@@ -32,6 +32,7 @@ System.register(["app/spotify/artist", "app/spotify/track", "app/spotify/pager"]
 
         this.releaseDate = data.release_date;
 
+        this.artUrl = this.images[0] ? this.images[0].url : "";
         if (data.tracks) this.tracks = new Pager(http, data.tracks, Track);
 
 

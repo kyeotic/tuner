@@ -1,7 +1,7 @@
-System.register(["app/spotify/service", "aurelia-router", "aurelia-framework"], function (_export) {
+System.register(["app/spotify/service", "aurelia-router", "aurelia-framework", "app/core/util"], function (_export) {
   "use strict";
 
-  var spotify, Router, Parent, _prototypeProperties, makeTab, Search;
+  var spotify, Router, Parent, Util, _prototypeProperties, makeTab, Search;
   return {
     setters: [function (_appSpotifyService) {
       spotify = _appSpotifyService["default"];
@@ -9,6 +9,8 @@ System.register(["app/spotify/service", "aurelia-router", "aurelia-framework"], 
       Router = _aureliaRouter.Router;
     }, function (_aureliaFramework) {
       Parent = _aureliaFramework.Parent;
+    }, function (_appCoreUtil) {
+      Util = _appCoreUtil.Util;
     }],
     execute: function () {
       _prototypeProperties = function (child, staticProps, instanceProps) {
@@ -45,6 +47,7 @@ System.register(["app/spotify/service", "aurelia-router", "aurelia-framework"], 
         }, {
           search: {
             value: function search() {
+              debugger;
               this.nav.navigate("search?" + Util.toQueryString({ q: this.query }));
             },
             writable: true,

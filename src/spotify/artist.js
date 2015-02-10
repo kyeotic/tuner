@@ -12,6 +12,8 @@ export class Artist {
     this.uri = data.uri || '';
     this.isFull = 'images' in data;
 
+    this.artUrl = this.images[0] ? this.images[0].url : ''; //Not found image HERE
+
     //Update a simplified object with all details
     this.fill = (force) => {
       if (!force && (this.href === undefined || this.href.length === 0 || this.isFull)) return;

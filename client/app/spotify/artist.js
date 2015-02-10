@@ -20,6 +20,7 @@ System.register([], function (_export) {
         this.uri = data.uri || "";
         this.isFull = "images" in data;
 
+        this.artUrl = this.images[0] ? this.images[0].url : "";
         this.fill = function (force) {
           if (!force && (_this.href === undefined || _this.href.length === 0 || _this.isFull)) return;
           http.get(_this.href).then(function (result) {

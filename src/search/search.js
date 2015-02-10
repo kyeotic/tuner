@@ -1,6 +1,7 @@
 import spotify from 'app/spotify/service';
 import {Router} from 'aurelia-router';
 import {Parent} from 'aurelia-framework';
+import {Util} from 'app/core/util';
 
 let makeTab = (header, model) => { return { header, model, viewmodel: './search-result'} }
 
@@ -18,6 +19,7 @@ export class Search {
   }
 
   search() {
+    debugger;
     this.nav.navigate('search?' + Util.toQueryString({q: this.query}));
   }
 

@@ -15,6 +15,7 @@ System.register(["app/spotify/artist", "app/spotify/album"], function (_export) 
         this._debug = data;
         this.http = http;
 
+
         this.id = data.id;
         this.genres = data.genres || [];
         this.href = data.href = "";
@@ -28,7 +29,7 @@ System.register(["app/spotify/artist", "app/spotify/album"], function (_export) 
         this.previewUrl = data.preview_url;
 
         this.album = new Album(http, data.album);
-        this.artist = new Artist(http, data.artist);
+        this.artist = new Artist(http, data.artists[0]);
 
         this.isFull = "popularity " in data;
 

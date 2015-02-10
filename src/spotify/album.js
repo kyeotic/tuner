@@ -20,6 +20,8 @@ export class Album {
 
     this.releaseDate = data.release_date;
 
+    this.artUrl = this.images[0] ? this.images[0].url : ''; //Not found image HERE
+
     //Does not appear on simplified objects
     if (data.tracks)
       this.tracks = new Pager(http, data.tracks, Track);
