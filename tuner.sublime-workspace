@@ -1,0 +1,566 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"se",
+				"serveBase"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"Tab",
+				"TabItem"
+			],
+			[
+				"al",
+				"albumPager"
+			],
+			[
+				"Al",
+				"Album"
+			],
+			[
+				"a",
+				"artists"
+			],
+			[
+				"is",
+				"isFull"
+			],
+			[
+				"Re",
+				"REPLACE"
+			],
+			[
+				"ca",
+				"canDeactivate"
+			],
+			[
+				"exe",
+				"executionContext"
+			],
+			[
+				"v",
+				"viewPort"
+			],
+			[
+				"De",
+				"describe"
+			],
+			[
+				"sta",
+				"strategy"
+			],
+			[
+				"next",
+				"nextResult"
+			],
+			[
+				"ne",
+				"nextResult"
+			],
+			[
+				"nex",
+				"nextCancelled"
+			],
+			[
+				"can",
+				"canDeactivateCompontent"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 219.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sshtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ssjsx",
+				"Set Syntax: JavaScript (JSX)"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"ssjo",
+				"Set Syntax: JSON"
+			],
+			[
+				"prety",
+				"Pretty JSON: JSON 2 XML"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ssxml",
+				"Set Syntax: XML"
+			],
+			[
+				"sss",
+				"Set Syntax: XSL"
+			],
+			[
+				"ssc",
+				"Set Syntax: C#"
+			],
+			[
+				"ss",
+				"Set Syntax: Python"
+			],
+			[
+				"ssjon",
+				"Set Syntax: JSON"
+			],
+			[
+				"ssj",
+				"Set Syntax: JSON"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"ssjson",
+				"Set Syntax: JSON"
+			],
+			[
+				"pret",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/GitHub/tuner/client/app.html",
+		"/D/GitHub/tuner/client/app.js",
+		"/D/GitHub/tuner/client/navbar/nav-bar.html",
+		"/D/GitHub/tuner/gulpfile.js",
+		"/D/GitHub/tuner/.gitignore",
+		"/D/GitHub/tuner/client/spotify/track.js",
+		"/D/GitHub/tuner/client/spotify/service.js",
+		"/D/GitHub/tuner/client/spotify/album.js",
+		"/D/GitHub/tuner/client/search/search.js",
+		"/D/GitHub/tuner/client/browse/artist.js",
+		"/D/GitHub/tuner/client/browse/album.js",
+		"/D/GitHub/tuner/client/home/index.js",
+		"/D/GitHub/tuner/dist/config.js",
+		"/D/GitHub/tuner/package.json",
+		"/D/GitHub/tuner/build/tasks/serve.js",
+		"/D/GitHub/tuner/build/paths.js",
+		"/D/GitHub/tuner/dist/content/css/app.css",
+		"/D/GitHub/tuner/client/browse/router-test.js",
+		"/D/GitHub/tuner/dist/index.html",
+		"/D/GitHub/tuner/src/app.js",
+		"/D/GitHub/skeleton-navigation/build/tasks/build.js",
+		"/D/GitHub/tuner/src/index.html",
+		"/D/GitHub/tuner/src/config.js",
+		"/D/GitHub/tuner/src/app.html",
+		"/D/GitHub/tuner/src/browse/album.js",
+		"/D/GitHub/tuner/client/jspm_packages/github/aurelia/bootstrapper@0.9.5/index.js",
+		"/D/GitHub/tuner/client/jspm_packages/github/aurelia/router@0.5.6/system/navigation-context.js",
+		"/D/GitHub/tuner/client/jspm_packages/github/aurelia/router@0.5.6/system/app-router.js",
+		"/D/GitHub/tuner/src/browse/router-test.js",
+		"/D/Software/Drivers/caps lock display.reg",
+		"/D/Videos/package.json",
+		"/C/Users/Tyrsius/Documents/GitHub/net-scanner/scan.js",
+		"/D/Videos/renamer.js",
+		"/C/Users/Tyrsius/Downloads/powder-90.2-win32/README.txt",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/app/browse/router-test.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/spotify/album.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/browse/track.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/browse/artist.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/search/results/track.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/search/results/artist.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/search/results/album.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/app.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/browse/album.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/search/search.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/spotify/service.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/search/search.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/browse/artist.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/config.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/jspm_packages/github/aurelia/router@0.5.6/.jspm.json",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/browse/album.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/browse/track.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/jspm_packages/github/aurelia/router@0.5.6/system/app-router.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/jspm_packages/github/aurelia/router@0.5.6/es6/app-router.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/jspm_packages/github/aurelia/router@0.5.5/.jspm.json",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/search/search-result.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/spotify/track.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/spotify/artist.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/content/css/app.css",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/navbar/nav-bar.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/home/index.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/core/util.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/.editorconfig",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/package.json",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/jspm_packages/github/aurelia/http-client@0.4.4/system/http-request-message.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/search/album-search-result.js",
+		"/C/Users/Tyrsius/Documents/GitHub/Giffy/server.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/search/album-search-result.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/search/artist-search-result.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/search/track-search-result.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/tabs/tab-item.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/tabs/tab-control.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/main.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/tabs/tab-control.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/tabs/tab-item.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/navbar/nav-bar.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/index.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/jspm_packages/npm/font-awesome@4.3.0/css/font-awesome.min.css",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/jspm_packages/github/aurelia/templating-resources@0.8.3/system/show.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/search/artist-search-result.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/search/track-search-result.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/spotify/pager.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/app.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/jspm_packages/github/aurelia/router@0.5.1/es6/router.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/jspm_packages/github/aurelia/router@0.5.1/system/router.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/home/index.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/lib/sugar-1.4.1-custom.min.js",
+		"/C/Users/Tyrsius/Downloads/sugar-1.4.1-custom.min.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/lib/sugar.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/config.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/lib/sugar-1.5.0.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/client/app/home/index.html",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/src/home/search.js",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/client/index.html",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/package.json",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/gulpfile.js",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/client/app/main.js",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/.gitignore",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/client/build.js",
+		"/C/Users/Tyrsius/Documents/GitHub/tuner/.gitignore",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/src/projects/static.js",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/client/config.js",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/src/main.js",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/src/app.js",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/src/home/index.html",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/src/app.html",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/src/projects/index.html",
+		"/C/Users/Tyrsius/Downloads/get-started (2).md",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/client/jspm_packages/github/aurelia/router@0.4.2/system/router.js",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/src/projects/index.js",
+		"/C/Users/Tyrsius/Documents/GitHub/portfolio/client/jspm_packages/github/aurelia/router@0.4.2/es6/router.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/src/navigation-plan.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/node_modules/karma/node_modules/connect/node_modules/express-session/node_modules/uid-safe/node_modules/base64-url/README.md",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/node_modules/conventional-changelog/node_modules/event-stream/node_modules/split/test/partitioned_unicode.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/node_modules/gulp-6to5/node_modules/6to5/lib/6to5/transformation/transformers/es6-property-name-shorthand.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/node_modules/phantomjs/node_modules/kew/test/externs_node.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/src/navigation-instruction.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/src/router-configuration.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/src/router.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/src/pipeline.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/metadata/src/annotations.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/test/router.spec.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/src/util.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/src/route-loading.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/src/navigation-context.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/src/app-router.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/src/activation.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/src/pipeline-provider.js",
+		"/C/Users/Tyrsius/Documents/GitHub/aurelia/router/src/navigation-commands.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\Tyrsius\\Documents\\GitHub\\tuner",
+			"C:\\Users\\Tyrsius\\Documents\\GitHub\\aurelia\\router\\src",
+			"C:\\Users\\Tyrsius\\Documents\\GitHub\\aurelia",
+			"C:\\Users\\Tyrsius\\Documents\\GitHub\\aurelia\\router\\src",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"app/",
+			"app/core",
+			"client",
+			"run",
+			"loadPolyfills",
+			"result",
+			"complete",
+			"result",
+			"Error",
+			"event",
+			"core/app",
+			"album",
+			"span",
+			"h3",
+			"h2",
+			"div",
+			"http-cl",
+			"hasQuery",
+			"album-search-result",
+			"search-result",
+			"();",
+			"Search",
+			"search",
+			"new",
+			"album",
+			"artist",
+			"import",
+			"sportify",
+			"class Parent",
+			"parent",
+			"dog",
+			"magni",
+			"dist",
+			"aurelia",
+			"project",
+			"http",
+			"aurelia",
+			"magnific",
+			"hasDifferentParameterValues",
+			"prev",
+			"reuse",
+			"canReuse",
+			"wildcard",
+			"ensureActivation",
+			"processActivatable",
+			"viewPorts",
+			"swap",
+			"viewPortInstructions",
+			"moduleId",
+			"NavigationContext",
+			"createNavigationContext",
+			"next",
+			"singleNavContext",
+			"processDeactivatable",
+			"canDeactivate",
+			"canDeactivate ",
+			"nextCancelled",
+			"can",
+			"canDeactivateContext",
+			"shouldContinue",
+			"isNavigationCommand",
+			"processDeactivatable",
+			"addPreviousDeactivatable",
+			"findDeactivatable",
+			"processDeactivatable",
+			".plan",
+			".plaen",
+			"singleDeactivateViewPort",
+			"plan",
+			"canDeactivateCompontent",
+			"addPreviousDeactivatable",
+			"findDeactivatable",
+			"processActivatable",
+			"processPotential",
+			"BuildNavigationPlanStep",
+			"withStep",
+			"CanDeactivatePreviousStep",
+			"steps",
+			"CanDeactivatePreviousStep",
+			"findDeactivatable",
+			"CanDeactivatePreviousStep",
+			"run(",
+			"run",
+			"TodoStore",
+			"SprintrApp",
+			"TodoApp",
+			"treadsmodel",
+			"search",
+			"generalclassifiable",
+			"template",
+			"error",
+			"HG",
+			"children",
+			"../img",
+			"error",
+			"type",
+			"json",
+			"NewtonSoft",
+			"site",
+			"title",
+			"f3",
+			"F3",
+			"admin",
+			"cmd"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "tuner.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"util",
+				"router\\src\\util.js"
+			],
+			[
+				"pip",
+				"router\\src\\pipeline.js"
+			],
+			[
+				"navigation",
+				"router\\src\\navigation-plan.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 177.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
