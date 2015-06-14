@@ -1,0 +1,37 @@
+<template>
+  <import from='tabs/tab-control'></import>
+  <import from='tabs/tab-item'></import>
+
+  <form class="form" submit.trigger="search()">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="input-group">
+          <input type="search" class="form-control" placeholder="Search Spotify" value.bind="query">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="submit">Search</button>
+          </span>
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+
+    </div>
+  </form>
+
+  <section if.bind="!hasResults">
+    <p>
+      Try searching for something.
+    </p>
+  </section>
+  <section if.bind="hasResults">
+    <div class="row top-buffer">
+      <div class="col-sm-8">
+        <tab-control>
+        <tab-item repeat.for="tab of tabs" title="${tab.header}">
+          <compose model.bind="tab.model" view-model.bind="tab.viewmodel"></compose>
+        </tab-item>
+      </tab-control>
+      </div>
+
+    </div>
+    
+  </section>
+</template>
