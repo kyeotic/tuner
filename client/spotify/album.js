@@ -1,6 +1,6 @@
-import {Artist} from 'spotify/artist';
-import {Track} from 'spotify/track';
-import {Pager} from 'spotify/pager';
+import {Artist} from 'app/spotify/artist';
+import {Track} from 'app/spotify/track';
+import {Pager} from 'app/spotify/pager';
 
 export class Album {
   constructor(http, data = {}) {
