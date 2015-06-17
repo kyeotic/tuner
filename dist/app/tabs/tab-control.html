@@ -1,9 +1,0 @@
-<template>
-  <ul class="nav nav-tabs">
-    <li repeat.for="item of items" class="${item.isSelected ? 'active' : ''}">
-      <a href="#" click.trigger="$parent.selectItem(item)">${item.title}</a>
-    </li>
-  </ul>
-
-  <content select="tab-item"></content>
-</template>

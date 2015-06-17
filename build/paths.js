@@ -11,5 +11,5 @@ module.exports = {
   style: 'styles/**/*.css',
   output: outputRoot,
   serve: serveBase,
-  sourceMapRelativePath: '../' + appRoot,
+  sourceMapRelativePath: '../' + appRoot
 };
