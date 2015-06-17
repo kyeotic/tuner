@@ -1,6 +1,6 @@
 import {Router, RouteRecognizer} from 'aurelia-router';
 import {Parent} from 'aurelia-framework';
-import {Util} from 'core/util';
+import {Util} from 'app/core/util';
 
 export class Home {
   static inject() { 

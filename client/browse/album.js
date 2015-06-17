@@ -1,5 +1,5 @@
-import spotify from 'spotify/service';
-import {Util} from 'core/util';
+import spotify from 'app/spotify/service';
+import {Util} from 'app/core/util';
 
 export class AlbumBrowse {
 	activate(config) {

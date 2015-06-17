@@ -1,9 +1,9 @@
 import {HttpClient} from 'aurelia-http-client';
-import {Util} from 'core/util';
-import {Artist} from 'spotify/artist';
-import {Track} from 'spotify/track';
-import {Album} from 'spotify/album';
-import {Pager} from 'spotify/pager';
+import {Util} from 'app/core/util';
+import {Artist} from 'app/spotify/artist';
+import {Track} from 'app/spotify/track';
+import {Album} from 'app/spotify/album';
+import {Pager} from 'app/spotify/pager';
 
 class Spotify {
 

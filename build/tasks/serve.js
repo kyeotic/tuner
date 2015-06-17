@@ -11,6 +11,10 @@ gulp.task('serve', ['build'], function(done) {
     port: 9000,
     server: {
       baseDir: [paths.serve],
+      routes: {
+        '/system.config.js': './system.config.js',
+        '/jspm_packages': './jspm_packages'
+      },
       middleware: function (req, res, next) {
         res.setHeader('Access-Control-Allow-Origin', '*');
         next();

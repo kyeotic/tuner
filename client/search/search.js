@@ -1,7 +1,7 @@
-import spotify from 'spotify/service';
+import spotify from 'app/spotify/service';
 import {Router} from 'aurelia-router';
 import {Parent} from 'aurelia-framework';
-import {Util} from 'core/util';
+import {Util} from 'app/core/util';
 
 let makeTab = (header, model) => { return { header, model, viewmodel: './search-result'} }
 
