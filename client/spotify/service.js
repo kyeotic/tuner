@@ -9,8 +9,8 @@ class Spotify {
 
   static inject() { return [HttpClient]; }
   constructor(http) {
-    this.http = new HttpClient('https://api.spotify.com/v1').configure(x => {
-      x.withBaseUrl('https://api.spotify.com/v1');
+    this.http = new HttpClient('https://api.spotify.com/v1').configure(client => {
+      client.withBaseUrl('https://api.spotify.com/v1');
     });
   }
 

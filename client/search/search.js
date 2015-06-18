@@ -3,8 +3,6 @@ import {Router} from 'aurelia-router';
 import {Parent} from 'aurelia-framework';
 import {Util} from 'app/core/util';
 
-let makeTab = (header, model) => { return { header, model, viewmodel: './search-result'} }
-
 export class Search {
   static inject() { 
     return [Parent.of(Router)]; 
@@ -31,10 +29,11 @@ export class Search {
 
     return spotify.search(this.query)
       .then(results => {
+        debugger;
         this.tabs = [
-            makeTab('Albums', results.albums)
-          , makeTab('Artists', results.artists)
-          , makeTab('Tracks', results.tracks) 
+            { header: 'Albums', model: results.albums, view: './results/albums.html' } 
+          , { header: 'Artists', model: results.artists, view: './results/artists.html' }
+          , { header: 'Tracks', model: results.tracks, view: './results/tracks.html' }
         ];
       });
   }

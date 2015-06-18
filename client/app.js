@@ -1,6 +1,7 @@
 import {inject} from 'aurelia-framework';
 import {Router} from 'aurelia-router';
 import 'bootstrap/css/bootstrap.css!';
+import 'font-awesome/css/font-awesome.min.css!';
 
 @inject(Router)
 export class App {
