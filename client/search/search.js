@@ -29,12 +29,11 @@ export class Search {
 
     return spotify.search(this.query)
       .then(results => {
-        debugger;
         this.tabs = [
             { header: 'Albums', model: results.albums, view: './results/albums.html' } 
           , { header: 'Artists', model: results.artists, view: './results/artists.html' }
           , { header: 'Tracks', model: results.tracks, view: './results/tracks.html' }
         ];
-      });
+      }.bind(this));
   }
 }
