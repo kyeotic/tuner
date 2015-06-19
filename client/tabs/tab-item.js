@@ -1,11 +1,8 @@
-import {Behavior} from 'aurelia-framework';
+import {customElement, bindable} from 'aurelia-framework';
 
+@customElement('tab-item')
+@bindable('title')
 export class TabItem {
-  static metadata(){
-    return Behavior
-      .customElement('tab-item')
-      .withProperty('title');
-  }
 
   constructor(){
     this.isSelected = false;

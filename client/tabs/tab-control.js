@@ -1,11 +1,8 @@
-import {Behavior} from 'aurelia-framework';
+import {customElement, syncChildren, bindable} from 'aurelia-framework';
 
+@customElement('tab-control')
+@syncChildren('items', 'itemsChanged', 'tab-item')
 export class TabControl {
-  static metadata(){
-    return Behavior
-      .customElement('tab-control')
-      .syncChildren('items', 'itemsChanged', 'tab-item');
-  }
 
   constructor(){
     this.items = [];

@@ -1,0 +1,16 @@
+<template>
+	<table class="table-hover">
+		<thead>
+			<th>Name</th>
+			<th>Artist</th>
+			<th>Releae Date</th>
+		</thead>
+		<tbody>
+		<tr repeat.for="item of items">
+			<td>${item.name}</td>
+			<td>${item.artists.join(',')}</td>
+			<td>${item.releaseDate}</td>
+		</tr>
+		</tbody>
+	</table>
+</template>

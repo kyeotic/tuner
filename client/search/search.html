@@ -1,6 +1,6 @@
 <template>
-  <import from='tabs/tab-control'></import>
-  <import from='tabs/tab-item'></import>
+  <require from='app/tabs/tab-control'></require>
+  <require from='app/tabs/tab-item'></require>
 
   <form class="form" submit.trigger="search()">
     <div class="row">
@@ -26,7 +26,7 @@
       <div class="col-sm-8">
         <tab-control>
         <tab-item repeat.for="tab of tabs" title="${tab.header}">
-          <compose model.bind="tab.model" view.bind="tab.view"></compose>
+          <compose model.bind="tab.model" view="${tab.view}"></compose>
         </tab-item>
       </tab-control>
       </div>
