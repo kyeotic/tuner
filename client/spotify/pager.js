@@ -14,9 +14,14 @@ export class Pager {
       this.next = data.next;
       this.previous = data.previous;
       this.total = data.total;
+    }
 
-      Object.defineProperty(this, 'hasNext', { get: () => { return this.next !== null || this.next !== undefined;} });
-      Object.defineProperty(this, 'hasPrevious', { get: () => { return this.previous !== null || this.previous !== undefined;} });
+    get hasNext() {
+      return this.next !== null || this.next !== undefined;
+    }
+
+    get hasPrevious() {
+       return this.previous !== null || this.previous !== undefined;
     }
 
     getNext() {

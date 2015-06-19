@@ -1,16 +1,8 @@
 <template>
-	<table class="table-hover">
-		<thead>
-			<th>Name</th>
-			<th>Artist</th>
-			<th>Releae Date</th>
-		</thead>
-		<tbody>
-		<tr repeat.for="item of items">
-			<td>${item.name}</td>
-			<td>${item.artists.join(',')}</td>
-			<td>${item.releaseDate}</td>
-		</tr>
-		</tbody>
-	</table>
+	<div class="row">
+		<div repeat.for="item of items" class="col-sm-2">
+			<img src="${item.artUrl}" class="img-responsive" alt="${name}">
+			<h3>${item.name}</h3>
+		</div>
+	</div>
 </template>

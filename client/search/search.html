@@ -26,7 +26,7 @@
       <div class="col-sm-8">
         <tab-control>
         <tab-item repeat.for="tab of tabs" title="${tab.header}">
-          <compose model.bind="tab.model" view="${tab.view}"></compose>
+          <compose model.bind="tab.model" view-model="app/search/searchResult"></compose>
         </tab-item>
       </tab-control>
       </div>

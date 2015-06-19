@@ -11,9 +11,10 @@ export class Search {
     this.tabs = [];
     this.nav = router;
     this.query = '';
-    Object.defineProperty(this, 'hasResults', {
-      get: () => {return this.query !== undefined && this.query.length > 2;}
-    })
+  }
+
+  get hasResults() {
+    return this.query !== undefined && this.query.length > 2;
   }
 
   search() {
@@ -30,9 +31,9 @@ export class Search {
     return spotify.search(this.query)
       .then(results => {
         this.tabs = [
-            { header: 'Albums', model: results.albums, view: './results/albums.html' } 
-          , { header: 'Artists', model: results.artists, view: './results/artists.html' }
-          , { header: 'Tracks', model: results.tracks, view: './results/tracks.html' }
+            { header: 'Albums', model: results.albums } 
+          , { header: 'Artists', model: results.artists }
+          , { header: 'Tracks', model: results.tracks }
         ];
       }.bind(this));
   }
