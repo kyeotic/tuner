@@ -21,8 +21,8 @@ export class Search {
     this.nav.navigate('search?' + Util.toQueryString({q: this.query}));
   }
 
-  activate(params, query) {
-    this.query = query.q || '';
+  activate(params) {
+    this.query = params.q || '';
 
     if (this.query.length === 0) {
       return;

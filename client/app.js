@@ -12,13 +12,13 @@ export class App {
 			config.title = 'Tuner';
 			//config.options.pushState = true;
 			config.map([
-				  { route: ['', 'home'],        moduleId: 'app/home/index',       	title: 'Home',   	nav: false }
-				, { route: 'search',            moduleId: 'app/search/search',    	title: 'Search', 	nav: true }
+				  { route: ['', 'home'],	name: 'home',	moduleId: 'app/home/index',       	title: 'Home',   	nav: false }
+				, { route: 'search',        name: 'search',	moduleId: 'app/search/search',    	title: 'Search', 	nav: true }
 
 				//Browse
-				, { route: 'albums/:id', 		moduleId: 'app/browse/album',							nav: false }
-				, { route: 'artists/:id', 		moduleId: 'app/browse/artist',							nav: false }
-				, { route: 'tracks/:id', 		moduleId: 'app/browse/track',							nav: false }
+				, { route: 'albums/:id', 	name: 'albums',	moduleId: 'app/browse/album',							nav: false }
+				, { route: 'artists/:id', 	name: 'artists',moduleId: 'app/browse/artist',							nav: false }
+				, { route: 'tracks/:id', 	name: 'tracks',	moduleId: 'app/browse/track',							nav: false }
 
 			]);
 			config.mapUnknownRoutes('errors/404');

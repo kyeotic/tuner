@@ -1,8 +1,11 @@
 <template>
+	<require from='app/plugins/converters'></require>
 	<div class="row">
 		<div repeat.for="item of items" class="col-sm-2">
-			<img src="${item.artUrl}" class="img-responsive" alt="${name}">
-			<h3>${item.name}</h3>
+			<a route-href="route: albums; params.bind: { id: item.id }">
+				<img src.bind="item.artUrl" class="img-responsive" alt.bind="item.name">
+				<h3>${item.name | trim:10}</h3>
+			</a>
 		</div>
 	</div>
 </template>
