@@ -4,7 +4,10 @@ import {Util} from 'app/core/util';
 export class AlbumBrowse {
 	activate(config) {
 		return spotify.getAlbum(config.id)
-			.then(result => this.album = result)
+			.then(result => {
+				//debugger;
+				this.album = result;
+			})
 			.catch(Util.logError);
 	}
 }

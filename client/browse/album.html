@@ -1,15 +1,20 @@
 <template>
+	<require from="app/browse/trackList"></require>
+	
 	<div class="row">
-		<div class="col-sm-3">
+		<div class="col-sm-2">
 			<img class="img-responsive" src.bind="album.artUrl">
 		</div>
-		<div>
-			<span>${album.type}</span>
+		<div class="col-sm-10">
 			<h1>${album.name}</h1>
+			<template repeat.for="artist of album.artists">
+				<strong>${artist.name}</strong>
+			</template>
 			<dl>
 				<dt>Genres</dt>
 				<dd>${album.genres.join(',')}</dd>
 			</dl>
-		</div>
+		</div>		
 	</div>
+	<track-list tracks.bind="album.tracks"></track-list>
 </template>
