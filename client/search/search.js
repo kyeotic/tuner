@@ -26,7 +26,7 @@ export class Search {
     return spotify.search(this.query)
       .then(results => {
         this.tabs = [
-            { header: 'Albums', model: results.albums } 
+            { header: 'Albums', model: results.albums, } 
           , { header: 'Artists', model: results.artists }
           , { header: 'Tracks', model: results.tracks }
         ];

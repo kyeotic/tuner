@@ -1,1 +1,24 @@
-<template></template>
+<template>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Song</th>
+				<th>Artist</th>
+				<th>Album</th>
+				<th>Length</th>
+				<th>Popularity</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr repeat.for="track of items">
+				<td>${track.name}</td>
+				<td>
+					<span class="csv" repeat.for="artist of track.artists">${artist.name}</span>
+				</td>
+				<td><a route-href="route: albums; params.bind: {id: track.album.id}">${track.album.name}</a></td>
+				<td>${track.duration}</td>
+				<td>${track.popularity}</td>
+			</tr>
+		</tbody>
+	</table>
+</template>

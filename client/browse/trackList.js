@@ -2,9 +2,9 @@ import {customElement, bindable} from 'aurelia-framework';
 
 @customElement('track-list')
 export class TrackList {
-	@bindable tracks;
+	@bindable pager;
 
-	get items () {
-		return this.tracks.items;
+	get tracks () {
+		return this.pager.items;
 	}
 }

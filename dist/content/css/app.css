@@ -25,3 +25,5 @@
         margin-bottom: 0;
     }
 }
+
+.csv:not(:last-child)::after { content: ", "; }

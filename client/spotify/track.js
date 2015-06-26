@@ -20,9 +20,9 @@ export class Track {
     this.previewUrl = data.preview_url;
 
     this.album = new Album(http, data.album);
-    this.artist = new Artist(http, data.artists[0]);
+    this.artists = data.artists ? data.artists.map(a => new Artist(http, a)) : [];
 
-    this.isFull = 'popularity ' in data;
+    this.isFull = 'popularity' in data;
 
     //Update a simplified object with all details
     this.fill = (force) => {
