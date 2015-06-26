@@ -1,22 +1,9 @@
 <template>
-  <form class="form" submit.trigger="search()">
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="input-group">
-          <input type="search" class="form-control" placeholder="Search Spotify" value.bind="query">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="submit">Search</button>
-          </span>
-        </div><!-- /input-group -->
-      </div><!-- /.col-lg-6 -->
-
-    </div>
-  </form>
+  <require from="app/search/searchBar"></require>  
+  <search-bar class="form-inline" query.bind="query"></search-bar>
 
   <section if.bind="!hasResults">
-    <p>
-      Try searching for something.
-    </p>
+    <p>Try searching for something.</p>
   </section>
   <section if.bind="hasResults">
     <div class="row top-buffer">

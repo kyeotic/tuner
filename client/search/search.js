@@ -1,24 +1,19 @@
 import spotify from 'app/spotify/service';
-import {Router} from 'aurelia-router';
-import {Parent} from 'aurelia-framework';
-import {Util} from 'app/core/util';
+import {activationStrategy} from 'aurelia-router';
 
 export class Search {
-  static inject() { 
-    return [Parent.of(Router)]; 
-  }
   constructor(router) {
     this.tabs = [];
-    this.nav = router;
     this.query = '';
+  }
+
+  determineActivationStrategy() {
+    //debugger;
+    return activationStrategy.replace;
   }
 
   get hasResults() {
     return this.query !== undefined && this.query.length > 2;
-  }
-
-  search() {
-    this.nav.navigate('search?' + Util.toQueryString({q: this.query}));
   }
 
   activate(params) {
