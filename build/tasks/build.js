@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var changed = require('gulp-changed');
 var plumber = require('gulp-plumber');
-var to5 = require('gulp-babel');
+var babel = require('gulp-babel');
 var sourcemaps = require('gulp-sourcemaps');
 var paths = require('../paths');
 var compilerOptions = require('../babel-options');
@@ -17,7 +17,7 @@ gulp.task('build-system', function () {
     .pipe(plumber())
     .pipe(changed(paths.output, {extension: '.js'}))
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(to5(assign({}, compilerOptions, {modules:'system'})))
+    .pipe(babel(assign({}, compilerOptions, {modules:'system'})))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.output));
 });
@@ -29,6 +29,14 @@ gulp.task('build-html', function () {
     .pipe(gulp.dest(paths.output));
 });
 
+gulp.task('build-server', function() {
+  return gulp.src(paths.serverSource)
+    .pipe(plumber())
+    .pipe(changed(paths.serverOutput, {extension: '.js'}))
+    .pipe(babel(assign({}, compilerOptions, {modules:'common'})))
+    .pipe(gulp.dest(paths.serverOutput));
+});
+
 // this task calls the clean task (located
 // in ./clean.js), then runs the build-system
 // and build-html tasks in parallel
@@ -36,7 +44,7 @@ gulp.task('build-html', function () {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-system', 'build-html'],
+    ['build-system', 'build-server', 'build-html'],
     callback
   );
 });
