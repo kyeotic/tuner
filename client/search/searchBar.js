@@ -6,10 +6,13 @@ import {Util} from 'app/core/util';
 @inject(Router)
 export class SearchBar {
 	@bindable query;
+
 	constructor(router) {
 		this.nav = router;
 	}
 	submit() {
-	    this.nav.navigate('search?' + Util.toQueryString({q: this.query}));
-	  }
+		this.nav.navigate('search?' + Util.toQueryString({q: this.query}));
+		this.query = '';
+	}
+
 }
