@@ -4,6 +4,7 @@
 			<tr>
 				<th>#</th>
 				<th>Title</th>
+				<th>Preview</th>
 				<th>Length</th>
 			</tr>
 		</thead>
@@ -11,6 +12,11 @@
 			<tr repeat.for="track of tracks">
 				<td>${track.trackNumber}</td>
 				<td>${track.name}</td>
+				<td>
+					<audio src="${track.previewUrl}" controls preload="none">
+					   <code>audio</code> element unsupported.
+					</audio>
+				</td>
 				<td>${track.duration}</td>
 			</tr>
 		</tbody>
