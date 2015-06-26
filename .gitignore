@@ -55,3 +55,4 @@ main-built.js
 node_modules/phantomjs/
 node_modules/.bin/phantomjs*
 dist/app/*
+server_built/*
