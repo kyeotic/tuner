@@ -1,11 +1,18 @@
 var fs = require('fs'),
     port = process.env.PORT || 9000,
-    clientDir = __dirname + '/client/',
+    clientDir = __dirname + '/dist/',
+    jspmConfig = __dirname + '/system.config.js',
+    jspmDir = __dirname + "/jspm_packages/",
     express = require('express'),
     app = express();
 
 //Configure
+app.use('/jspm_packages', express.static(jspmDir));
 app.use(express.static(clientDir));
+
+app.get('/system.config.js', function(req, res) {
+	res.sendFile(jspmConfig);
+});
 
 //Index Route
 app.get('/*', function(req, res){
