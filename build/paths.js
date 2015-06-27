@@ -13,6 +13,6 @@ module.exports = {
 
   //Server
   serverSource: 'server/**/*.js',
-  serverOutput: 'server_built/',
+  serverOutput: 'server_dist/',
   server: 'server.js'
 };

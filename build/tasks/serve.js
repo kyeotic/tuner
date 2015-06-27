@@ -8,24 +8,10 @@ var argv = require('yargs').argv;
 // to create a dev server instance
 // at http://localhost:9000
 gulp.task('serve', ['build'], function(done) {
-  if (argv.sync || argv.s) {
-    console.log('running browsersync')
-    browserSync({
-      open: false,
-      port: 9000,
-      server: {
-        baseDir: [paths.serve],
-        routes: {
-          '/system.config.js': './system.config.js',
-          '/jspm_packages': './jspm_packages'
-        },
-        middleware: function (req, res, next) {
-          res.setHeader('Access-Control-Allow-Origin', '*');
-          next();
-        }
-      }
-    }, done);
-  }    
-  else
-    server.listen({ path: paths.server});
+  browserSync({
+    open: false,
+    port: 9000,
+    proxy: "localhost:9001"
+  }, done);
+  server.listen({ path: paths.server, env: { port: 9001 } });
 });
