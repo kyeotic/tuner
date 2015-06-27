@@ -9,11 +9,23 @@
   "author": "Timothy Moran <tyrsius@gmail.com> (http://tyrsius.com/)",
   "main": "dist/commonjs/index.js",
   "scripts": {
-    "build": "npm run build:client-js",
     "start": "node server.js",
-    "clean": "rimraf dist/app/*",
+    "clean:client": "rimraf dist/app/*",
+    "clean:server": "rimraf server_dist/*",
+    "clean": "npm run clean:client && npm run clean:server",
+    "build": "parallelshell \"npm run build:client -s\" \"npm run build:server-js -s\"",
+    "rebuild": "npm run clean && npm run build",
     "build:client-js": "babel client --out-dir dist/app --source-maps --stage 2 --modules system --optional es7.decorators,es7.classProperties",
-    "build:html": "copyup 'client/**/*.html' dist/app"
+    "build:html": "copyup client/**/*html dist/app",
+    "build:client": "parallelshell \"npm run build:client-js -s\" \"npm run build:html -s\"",
+    "watch:client": "watch \"npm run build:client -s\" client",
+    "build:server": "babel server --out-dir server_dist --stage 2 --modules common",
+    "watch:server": "watch \"npm run build:server\" server",
+    "serve": "nodemon server.js --delay 2.5 --watch server",
+    "open:dev": "opener http://localhost:9000",
+    "watch": "parallelshell \"npm run watch:server -s\" \"npm run watch:client -s\"",
+    "dev": "parallelshell \"npm run serve\" \"npm run watch -s\"",
+    "dev:open": "npm run open:dev && npm run dev"
   },
   "repository": {
     "type": "git",
@@ -25,6 +37,7 @@
     "copyfiles": "^0.2.1",
     "jspm": "^0.15.7",
     "nodemon": "^1.3.7",
+    "opener": "^1.4.1",
     "parallelshell": "^1.1.1",
     "rimraf": "^2.4.0",
     "watch": "^0.16.0"
