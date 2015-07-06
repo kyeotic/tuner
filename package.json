@@ -68,6 +68,8 @@
     }
   },
   "dependencies": {
-    "express": "^4.10.7"
+    "express": "^4.10.7",
+    "json-stringify-safe": "^5.0.1",
+    "request": "^2.58.0"
   }
 }

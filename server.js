@@ -14,6 +14,9 @@ app.get('/system.config.js', function(req, res) {
 	res.sendFile(jspmConfig);
 });
 
+//Api
+require('./server_dist/routes')(app);
+
 //Index Route
 app.get('/*', function(req, res){
     res.sendFile(clientDir + '/index.html');

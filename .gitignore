@@ -56,3 +56,4 @@ node_modules/phantomjs/
 node_modules/.bin/phantomjs*
 dist/app/*
 server_dist
+env.json
