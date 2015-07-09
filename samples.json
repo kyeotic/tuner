@@ -1,0 +1,96 @@
+{
+    "echonest": {
+        "track": {
+            "result": {
+                "response": {
+                    "status": {
+                        "version": "4.2",
+                        "code": 0,
+                        "message": "Success"
+                    },
+                    "songs": [
+                        {
+                            "audio_summary": {
+                                "key": 5,
+                                "analysis_url": "http://echonest-analysis.s3.amazonaws.com/TR/zn20XgurRZBRXM7wV4ddvfar69yme_8yomx6ft0j7BxpjgoodV-oW1oIJpPpxizjmicFkifdte1Q80_fo%3D/3/full.json?AWSAccessKeyId=AKIAJRDFEY23UEVW42BQ&Expires=1436127409&Signature=xwIz3oalJiyItt8%2BZ/Fw/WN4RyA%3D",
+                                "energy": 0.619768,
+                                "liveness": 0.132693,
+                                "tempo": 86.584,
+                                "speechiness": 0.448056,
+                                "acousticness": 0.239767,
+                                "instrumentalness": 0,
+                                "mode": 1,
+                                "time_signature": 4,
+                                "duration": 246.65288,
+                                "loudness": -7.681,
+                                "audio_md5": "08038fd529c50ce81a0b1a20bc67a509",
+                                "valence": 0.604288,
+                                "danceability": 0.637669
+                            },
+                            "artist_discovery_rank": 2625,
+                            "song_currency_rank": 637752,
+                            "title": "All You Can Do featuring Jimetta Rose",
+                            "artist_discovery": 0.5674301228386561,
+                            "artist_hotttnesss_rank": 7252,
+                            "artist_hotttnesss": 0.592783,
+                            "artist_name": "Watsky",
+                            "artist_foreign_ids": [
+                                {
+                                    "catalog": "spotify",
+                                    "foreign_id": "spotify:artist:3mJ9GlkLzj8Ka7Z7EQaCMi"
+                                }
+                            ],
+                            "tracks": [
+                                {
+                                    "foreign_release_id": "spotify:album:6QcJMRBhHD5W1fiKI4jy4z",
+                                    "catalog": "spotify",
+                                    "foreign_id": "spotify:track:6o2mdwsgbdQ7ygs7zpF0gx",
+                                    "id": "TRTGYJJ147C63F711D"
+                                },
+                                {
+                                    "foreign_release_id": "spotify:album:7dUV1n03xYA8nGE2ancnyD",
+                                    "catalog": "spotify",
+                                    "foreign_id": "spotify:track:7gNzzaOsa9vNujfbsCnr9O",
+                                    "id": "TRGIKXQ147C63FCFFD"
+                                },
+                                {
+                                    "foreign_release_id": "spotify:album:21hZZun13TzqTRdiOOMpHD",
+                                    "catalog": "spotify",
+                                    "foreign_id": "spotify:track:7lR384PMWPAS2Z8ze1vIK4",
+                                    "id": "TRUWOUI1479BBA8E0E"
+                                },
+                                {
+                                    "foreign_release_id": "spotify:album:3GbfphW7hrGt6XKiIXuZ2M",
+                                    "catalog": "spotify",
+                                    "foreign_id": "spotify:track:3pzs9QE675wV636Uthj9yd",
+                                    "id": "TRCTSQQ1479BB6F9AB"
+                                }
+                            ],
+                            "artist_familiarity_rank": 43977,
+                            "song_hotttnesss_rank": 541017,
+                            "song_hotttnesss": 0.195573,
+                            "song_currency": 0.0008851468048359239,
+                            "artist_familiarity": 0.388281,
+                            "artist_id": "ARWPJTD12EC561C1B4",
+                            "song_type": [
+                                "studio",
+                                "electric",
+                                "vocal"
+                            ],
+                            "id": "SORPSAO147D89737C2",
+                            "artist_location": {
+                                "latitude": 37.7796,
+                                "location": "San Francisco, CA, US",
+                                "longitude": -122.42
+                            }
+                        }
+                    ]
+                }
+            },
+            "rate": {
+                "total": "20",
+                "remaining": "17"
+            }
+        }
+    }
+}
